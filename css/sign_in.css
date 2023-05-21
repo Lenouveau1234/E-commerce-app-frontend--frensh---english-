@@ -1,0 +1,254 @@
+/* Start Variables  */
+:root {
+    --first-color: #00bdc9;
+    --second-color: #134982;
+    --third-color: #ec639e;
+    --white-color: #fff;
+    --size-word: 18px;
+}
+/* End Variables  */
+
+/* Start Global Rules  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--white-color);
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 10px;
+    margin-top: 10px;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.display-none {
+    display: none;
+}
+/* End Global Rules  */
+
+/* Start header */
+header {
+    min-height: 90px;
+    background-color: var(--second-color);
+}
+header .container .laguage-currency {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header .container .laguage-currency::after {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: hsl(0, 0%, 58%);
+    bottom: 0;
+    width: calc(100% - 30px);
+    left: 10px;
+}
+header .container .laguage-currency .language span a,
+header .container .laguage-currency .currency span a {
+    color: var(--white-color);
+    font-size: 13px;
+}
+header .container .laguage-currency .language span a:hover,
+header .container .laguage-currency .currency span a:hover {
+    color: var(--first-color);
+}
+header .container .laguage-currency span {
+    font-size: 13px;
+    color: var(--white-color);
+}
+header .container .laguage-currency div span {
+    margin-left: 8px;
+}
+header .container .laguage-currency div span:nth-of-type(2):hover,
+header .container .laguage-currency div span:last-of-type:hover {
+    color: var(--first-color);
+    cursor: pointer;
+}
+header .container .logo-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width:767px) {
+    header .container .logo-navbar nav {
+        display: none;
+    }
+}
+header .container .logo-navbar .toggle-menu,
+header .container .logo-navbar .fa-xmark {
+    color: var(--white-color);
+    cursor: pointer;
+    font-size: 30px;
+}
+header .container .logo-navbar .toggle-menu:hover,
+header .container .logo-navbar .fa-xmark:hover {
+    color: var(--first-color);
+}
+@media (min-width:767px) {
+    header .container .logo-navbar .toggle-menu {
+        display: none;
+    }
+    header .container .logo-navbar .fa-xmark {
+        display: none;
+    }
+}
+header .container .logo-navbar .logo img {
+    height: 50px;
+}
+header .logo-navbar nav {
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo-navbar nav ul {
+    display: flex;
+    margin-right: 30px;
+}
+header .logo-navbar nav li a {
+    color: var(--white-color);
+    cursor: pointer;
+    margin-left: 30px;
+    font-size: var(--size-word);
+    font-weight: 500;
+    padding: 10px;
+}
+header .logo-navbar nav li a:hover {
+    border-bottom: 1px solid var(--first-color);
+    color: var(--first-color);
+}
+header .logo-navbar nav .form i {
+    cursor: pointer;
+    margin-left: 10px;
+}
+header .logo-navbar nav .form i:hover {
+    color: var(--first-color);
+}
+
+header .logo-navbar nav .form input {
+    padding: 4px;
+    border: 1px solid #ddd;
+}
+header .logo-navbar nav .form input:focus{
+    outline: 1px solid var(--first-color);
+}
+header .logo-navbar nav .form input::placeholder {
+    font-size: 12px;
+}
+header .container .menu {
+    padding: 15px;
+}
+@media (min-width:767px) {
+    header .container .menu {
+        display: none;
+    }
+}
+header .container .menu ul li {
+    padding: 10px;
+    color: var(--white-color);
+    font-size: var(--size-word);
+}
+header .container .menu ul li a {
+    color: var(--white-color);
+    cursor: pointer;
+    padding: 5px;
+}
+header .container .menu ul li a:hover {
+    border-bottom: 1px solid var(--first-color);
+    color: var(--first-color);
+}
+
+/* End header */
+
+/* Start Container  */
+.form-img{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.form-img .image-container {
+    width: 350px;
+    align-self: center;
+}
+@media (max-width:767px) {
+    .form-img .image-container {
+        display: none;
+    }
+}
+.form-img .image-container img{
+    width: 100%;
+    border-radius: 10px;
+}
+.form-img div form fieldset{
+    padding: 50px 10px;
+    color: var(--second-color);
+}
+.form-img div form fieldset legend{
+    padding: 5px;
+    font-size: var(--size-word);
+}
+.form-img div form fieldset div{
+    padding: 15px;
+}
+.form-img div form fieldset div:first-of-type input,
+.form-img div form fieldset div:nth-of-type(2) input,
+.form-img div form fieldset div:last-of-type input,
+.form-img div form fieldset div:last-of-type button{
+    padding: 8px;
+    border-radius: 5px;
+}
+.form-img div form fieldset div:first-of-type input,
+.form-img div form fieldset div:nth-of-type(2) input{
+    border: 1px solid #ddd;
+    width: 320px;
+}
+.form-img div form fieldset div:first-of-type input:focus,
+.form-img div form fieldset div:nth-of-type(2) input:focus{
+    outline:  1px solid var(--first-color);
+}
+.form-img div form fieldset div:last-of-type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-img div form fieldset div:last-of-type input,
+.form-img div form fieldset div:last-of-type button{
+    cursor: pointer;
+    width: 120px;
+    border: none;
+    text-align: center;
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+.form-img div form fieldset div:last-of-type input:hover,
+.form-img div form fieldset div:last-of-type button:hover{
+    background-color: var(--first-color);
+}
+.form-img div form fieldset div:last-of-type button a{
+    color: var(--white-color);
+}
+.form-img div form fieldset p{
+    text-align: center;
+    font-size: var(--size-word);
+    cursor: pointer;
+}
+.form-img div form fieldset p:hover{
+    color: var(--first-color);
+}
+/* End Container  */

@@ -1,0 +1,462 @@
+/* Start Variables  */
+:root{
+    --first-color: #00bdc9;
+    --second-color: #134982;
+    --third-color: #ec639e;
+    --white-color: #fff;
+    --size-word: 18px;
+    --section-title :20px;
+}
+/* End Variables  */
+
+/* Start Global Rules  */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--white-color);
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small devices */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium devices */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large devices */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.display-none{
+    display: none;
+}
+.clicked{
+    color: var(--first-color);
+}
+/* End Global Rules  */
+
+/* Start header */
+header{
+    min-height: 90px;
+    background-color: var(--second-color);
+}
+header .container .laguage-currency {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header .container .laguage-currency::after {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: hsl(0, 0%, 58%);
+    bottom: 0;
+    width: calc(100% - 30px);
+    left: 10px;
+}
+header .container .laguage-currency .language span a,
+header .container .laguage-currency .currency span a,
+header .container .laguage-currency .info span{
+    color: var(--white-color);
+    font-size: 13px;
+}
+header .container .laguage-currency .language span a:hover,
+header .container .laguage-currency .currency span a:hover{
+    color: var(--first-color);
+}
+header .container .laguage-currency .info span {
+    margin-left: 8px;
+}
+@media (max-width:768px) {
+    header .container .laguage-currency .info {
+        display: none;
+    }
+}
+header .container .laguage-currency div:last-of-type span:nth-of-type(2):hover,
+header .container .laguage-currency div:last-of-type span:last-of-type:hover {
+    color: var(--first-color);
+    cursor: pointer;
+}
+header .container .logo-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width:767px) {
+    header .container .logo-navbar nav{
+        display: none;
+    }
+}
+header .container .logo-navbar .toggle-menu,
+header .container .logo-navbar .fa-xmark{
+    color: var(--white-color);
+    cursor: pointer;
+    font-size: 30px;
+}
+header .container .logo-navbar .toggle-menu:hover,
+header .container .logo-navbar .fa-xmark:hover{
+    color: var(--first-color);
+}
+@media (min-width:767px) {
+    header .container .logo-navbar .toggle-menu{
+        display: none;
+    }
+    header .container .logo-navbar .fa-xmark{
+        display: none;
+    }
+}
+header .container .logo-navbar .logo img{
+    height: 50px;
+}
+header .logo-navbar nav{
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo-navbar nav ul{
+    display: flex;
+    margin-right: 30px;
+}
+header .logo-navbar nav li a{
+    color: var(--white-color);
+    cursor: pointer;
+    margin-left: 30px;
+    font-size: var(--size-word);
+    font-weight: 500;
+    padding: 10px;
+}
+header .logo-navbar nav li a:hover{
+    border-bottom: 1px solid var(--first-color);
+    color: var(--first-color);
+}
+header .logo-navbar nav .form i{
+    cursor: pointer;
+    margin-left: 10px;
+}
+header .logo-navbar nav .form i:hover{
+    color: var(--first-color);
+}
+header .logo-navbar nav .form input{
+    padding: 4px;
+    border: .5px solid #ddd;
+}
+header .logo-navbar nav .form input:focus{
+    outline: 1px solid var(--first-color);
+}
+header .logo-navbar nav .form input::placeholder{
+    font-size: 12px;
+}
+header .container .menu{
+    padding: 15px;
+}
+@media (min-width:767px) {
+    header .container .menu {
+        display: none;
+    }
+}
+header .container .menu ul li{
+    padding: 10px;
+    color: var(--white-color);
+    font-size: 18px;
+}
+header .container .menu ul li a {
+    color: var(--white-color);
+    cursor: pointer;
+    padding: 5px;
+}
+header .container .menu ul li a:hover {
+    border-bottom: 1px solid var(--first-color);
+    color: var(--first-color);
+}
+/* End header */
+
+/* Start body */
+.bodyPage {
+    padding: 10px;
+    display: flex;
+}
+.bodyPage .categorie{
+    background-color: var(--second-color);
+    padding: 18px 5px;
+}
+@media (max-width:767px) {
+    .bodyPage .categorie {
+        display: none;
+    }
+}
+.bodyPage .categorie ul li:first-of-type{
+    padding: 14px; 
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+}
+.bodyPage .categorie ul li:first-of-type span:first-of-type {
+    margin-right: 10px;
+}
+.bodyPage .categorie ul li:nth-of-type(2),
+.bodyPage .categorie ul li:nth-of-type(3),
+.bodyPage .categorie ul li:nth-of-type(4),
+.bodyPage .categorie ul li:last-of-type{
+    padding: 14px;
+}
+.bodyPage .categorie ul li:nth-of-type(2) a,
+.bodyPage .categorie ul li:nth-of-type(3) a,
+.bodyPage .categorie ul li:nth-of-type(4) a,
+.bodyPage .categorie ul li:last-of-type a{
+    color: var(--white-color);
+    cursor: pointer;
+}
+.bodyPage .categorie ul li:nth-of-type(2) a:hover,
+.bodyPage .categorie ul li:nth-of-type(3) a:hover,
+.bodyPage .categorie ul li:nth-of-type(4) a:hover,
+.bodyPage .categorie ul li:last-of-type a:hover{
+    color: var(--first-color);
+    border-bottom: .5px solid var(--first-color);
+}
+.bodyPage .pub{
+    margin-top: 10px;
+}
+@media (max-width:767px) {
+    .bodyPage .pub{
+        display: none;
+    }
+}
+.bodyPage .pub div{
+    width: 200px;
+}
+.bodyPage .pub  img:last-of-type{
+    height: 225px;
+}
+.bodyPage .pub img:nth-of-type(2){
+    height: 298px;
+}
+.bodyPage .pub img:nth-of-type(3){
+    height: 298px;
+}
+/* End body */
+
+.bodyPage .products{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+/* Start Men T-shirt */
+.bodyPage .products .men-tshirt p:first-child,
+.bodyPage .products .men-pants p:first-child,
+.bodyPage .products .men-glasses p:first-child {
+    background-color: var(--white-color);
+    color: var(--second-color);
+    font-size: var(--section-title);
+    font-weight: 800;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+}
+.bodyPage .products .men-tshirt p:first-child span:hover,
+.bodyPage .products .men-pants p:first-child span:hover,
+.bodyPage .products .men-glasses p:first-child span:hover{
+    color: var(--first-color);
+    cursor: pointer;
+}
+.bodyPage .products .men-tshirt .image-container,
+.bodyPage .products .men-pants .image-container,
+.bodyPage .products .men-glasses .image-container{
+    padding-top: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width:767px) {
+    .bodyPage .products .men-tshirt .image-container,
+    .bodyPage .products .men-pants .image-container,
+    .bodyPage .products .men-glasses .image-container{
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+.bodyPage .products .men-tshirt .image-container div,
+.bodyPage .products .men-pants .image-container div,
+.bodyPage .products .men-glasses .image-container div{
+    cursor: pointer;
+    width: 170px;
+}
+@media (max-width:767px) {
+    .bodyPage .products .men-tshirt .image-container div,
+    .bodyPage .products .men-pants .image-container div,
+    .bodyPage .products .men-glasses .image-container div {
+        width: 300px;
+    }
+}
+.bodyPage .products .men-tshirt .image-container div img,
+.bodyPage .products .men-pants .image-container div img,
+.bodyPage .products .men-glasses .image-container div img{
+    height: 140px;
+    text-align: center;
+    width: 100%;
+}
+.bodyPage .products .men-tshirt .image-container div h4,
+.bodyPage .products .men-pants .image-container div h4,
+.bodyPage .products .men-glasses .image-container div h4{
+    padding-left: 10px;
+    margin-bottom: 3px;
+    color: var(--second-color);
+}
+.bodyPage .products .men-tshirt .image-container div h4:hover,
+.bodyPage .products .men-pants .image-container div h4:hover ,
+.bodyPage .products .men-glasses .image-container div h4:hover {
+    color: var(--first-color);
+}
+.bodyPage .products .men-tshirt .image-container div p:first-of-type,
+.bodyPage .products .men-pants .image-container div p:first-of-type,
+.bodyPage .products .men-glasses .image-container div p:first-of-type{
+    padding-left: 10px;
+    padding-right: 5px;
+    font-size: 11px;
+    padding-bottom: 5px;
+    color: var(--second-color);
+}
+.bodyPage .products .men-tshirt .image-container div p:last-of-type,
+.bodyPage .products .men-pants .image-container div p:last-of-type,
+.bodyPage .products .men-glasses .image-container div p:last-of-type{
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.bodyPage .products .men-tshirt .image-container div p:last-of-type span,
+.bodyPage .products .men-pants .image-container div p:last-of-type span,
+.bodyPage .products .men-glasses .image-container div p:last-of-type span{
+    font-size: var(--size-word);
+    color: var(--second-color);
+}
+.bodyPage .products .men-tshirt .image-container div p:last-of-type span:last-of-type,
+.bodyPage .products .men-pants .image-container div p:last-of-type span:last-of-type,
+.bodyPage .products .men-glasses .image-container div p:last-of-type span:last-of-type{
+    text-decoration: line-through;
+    color: var(--third-color);
+}
+/* End Men T-shirt */
+
+/* Start Best Sales */
+.products .best-sales{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.bodyPage .products .best-sales p:first-of-type {
+    background-color: var(--white-color);
+    color: var(--second-color);
+    font-size: var(--section-title);
+    font-weight: 800;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+}
+.bodyPage .products .best-sales p:first-of-type span:hover{
+    color: var(--first-color);
+    cursor: pointer;
+}
+.products .best-sales .image-container{
+    display: flex;
+    justify-content: space-between;
+}
+.products .best-sales .image-container div{
+    background-color: var(--white-color);
+    width: 170px;
+    cursor: pointer;
+}
+@media (max-width:767px) {
+    .products .best-sales .image-container div{
+        display: none;
+    }
+}
+.products .best-sales .image-container {
+    height: 220px;
+}
+.products .best-sales .image-container img{
+    height: 220px;
+    width: 79%;
+}
+@media (max-width:767px) {
+    .products .best-sales .image-container img {
+        width: 100%;
+    }
+}
+.bodyPage .products .best-sales .image-container div img {
+    height: 140px;
+    width: 100%;
+}
+.bodyPage .products .best-sales .image-container div h4 {
+    padding-left: 10px;
+    margin-bottom: 3px;
+    color: var(--second-color);
+}
+.bodyPage .products .best-sales .image-container div h4:hover {
+    color: var(--first-color);
+}
+.bodyPage .products .best-sales .image-container div p:first-of-type {
+    padding-left: 10px;
+    padding-right: 5px;
+    font-size: 11px;
+    padding-bottom: 5px;
+    color: var(--second-color);
+}
+
+.bodyPage .products .best-sales .image-container div p:last-of-type {
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.bodyPage .products .best-sales .image-container div p:last-of-type span {
+    font-size: var(--size-word);
+    color: var(--second-color);
+}
+
+.bodyPage .products .best-sales .image-container div p:last-of-type span:last-of-type {
+    text-decoration: line-through;
+    color: var(--third-color);
+}
+/* End Best Sales */
+
+/* Start footer  */
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--second-color);
+    color: var(--white-color);
+    font-size: var(--size-word);
+}
+/* End footer  */
